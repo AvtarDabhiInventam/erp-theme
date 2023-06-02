@@ -15,7 +15,7 @@ const navigation = () => {
         },
         {
           title: 'Item Master',
-          path: ''
+          path: '/Masters/items-master'
         },
         {
           title: 'Quality Master',
