@@ -15,11 +15,11 @@ const navigation = () => {
         },
         {
           title: 'Item Master',
-          path: ''
+          path: '/Masters/items-master-profile'
         },
         {
           title: 'Quality Master',
-          path: ''
+          path: '/Masters/quality-master-profile'
         },
         {
           title: 'SubHead Master',

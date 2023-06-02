@@ -1231,6 +1231,316 @@ const AccountMaster = () => {
                                 />
                               </Box>
                             </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Do You Want To Use Auto Qty?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Unit Changable?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>
+                                  Do You Want To Allow Create New Item?
+                                </Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Discount Changable?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Do You Want Expiry Date Alert?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Cont. Entry with Same Party?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>
+                                  Do You Want To Use Bardcode From Pur.?
+                                </Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Use Ready GST 12%?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>
+                                  Do You Want To Create Auto A/C Master?
+                                </Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Show Remarks in Bill Items?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Show UOM in Sales/Purchase?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Negative Stock Intimation?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Sales Against JobWork?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Use Auto Print Sales Bill</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Do You Want To Show Salesman?</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
+                            <Grid item xs={12} sm={4}>
+                              <Box
+                                sx={{
+                                  display: 'flex',
+                                  justifyContent: 'space-between',
+                                  alignItems: 'center',
+                                  border: '1px solid #4c4e6438',
+                                  padding: '5px 12px',
+                                  borderRadius: '8px'
+                                }}
+                              >
+                                <Typography sx={{ paddingRight: '15px' }}>Show Add Multi Images</Typography>
+                                <Switch
+                                  edge='end'
+                                  checked={checked.indexOf('wifi') !== -1}
+                                  onChange={handleToggle('wifi')}
+                                />
+                              </Box>
+                            </Grid>
                           </Grid>
                         </CardContent>
                       </Card>
