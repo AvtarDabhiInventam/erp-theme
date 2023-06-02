@@ -33,6 +33,7 @@ import Icon from 'src/@core/components/icon'
 // ** Third Party Imports
 import { useDropzone } from 'react-dropzone'
 import DropzoneWrapper from 'src/@core/styles/libs/react-dropzone'
+import { useRouter } from 'next/router'
 
 // Styled component for the upload image inside the dropzone area
 const Img = styled('img')(({ theme }) => ({
@@ -56,6 +57,9 @@ const HeadingTypography = styled(Typography)(({ theme }) => ({
 }))
 
 const ItemsMaster = () => {
+
+  const router = useRouter()
+
   // ** State
   const [files, setFiles] = useState([])
 
@@ -171,7 +175,7 @@ const ItemsMaster = () => {
                           </Select>
                         </FormControl>
                         <Box sx={{ mt: 4 }}>
-                          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+                          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained' onClick={() => router.push('/Masters/quality-master-profile')}>
                             Add New
                           </Button>
                         </Box>
