@@ -404,6 +404,7 @@ const Home = () => {
             enableColumnOrdering
             enableEditing
             enableGrouping
+            enableColumnResizing
             onEditingRowSave={handleSaveRowEdits}
             onEditingRowCancel={handleCancelRowEdits}
             renderRowActions={({ row, table }) => (
