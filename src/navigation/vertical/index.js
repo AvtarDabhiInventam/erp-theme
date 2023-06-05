@@ -161,7 +161,7 @@ const navigation = () => {
         },
         {
           title: 'Master Data',
-          path: ''
+          path: '/Masters/master-data'
         }
       ]
     },
