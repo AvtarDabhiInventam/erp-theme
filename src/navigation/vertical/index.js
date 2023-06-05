@@ -11,7 +11,25 @@ const navigation = () => {
       children: [
         {
           title: 'Sales',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'Sales Bill',
+              path: ''
+            },
+            {
+              title: 'Sales Challan',
+              path: ''
+            },
+            {
+              title: 'Sales Order',
+              path: ''
+            },
+            {
+              title: 'Sales Return',
+              path: ''
+            }
+          ]
         },
         {
           title: 'Purchase',
