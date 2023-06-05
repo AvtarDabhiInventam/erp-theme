@@ -16,7 +16,6 @@ import {
   DialogTitle,
   Divider,
   FormControl,
-  Icon,
   IconButton,
   InputLabel,
   MenuItem,
@@ -154,7 +153,7 @@ const data = [
   }
 ]
 
-const QualityMasterProfile = () => {
+const AccountsMasterProfile = () => {
   const router = useRouter()
 
   const [createModalOpen, setCreateModalOpen] = useState(false)
@@ -322,17 +321,13 @@ const QualityMasterProfile = () => {
   }, [])
   const toggleAddUserDrawer = () => setAddUserOpen(!addUserOpen)
 
-  // Modal
-  // ** States
-  const [show, setShow] = useState(false)
-
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Card>
           <CardHeader title='Item List' sx={{ pb: 4, '& .MuiCardHeader-title': { letterSpacing: '.15px' } }} />
           <CardActions sx={{ flexWrap: 'wrap', gap: '10px' }}>
-            <Button size='large' type='submit' variant='contained' onClick={() => setShow(true)}>
+            <Button size='large' type='submit' variant='contained' onClick={() => router.push('/Masters/account-master')}>
               Add
             </Button>
             <Button size='large' type='submit' variant='contained'>
@@ -353,87 +348,16 @@ const QualityMasterProfile = () => {
             <Button size='large' type='submit' variant='contained'>
               Sync
             </Button>
+            <Button size='large' type='submit' variant='contained'>
+              Print
+            </Button>
+            <Button size='large' type='submit' variant='contained'>
+              Bardcode
+            </Button>
+            <Button size='large' type='submit' variant='contained'>
+              Opening
+            </Button>
           </CardActions>
-
-          {/* Modal Start */}
-          <Dialog
-            fullWidth
-            open={show}
-            maxWidth='sm'
-            scroll='body'
-            onClose={() => setShow(false)}
-            onBackdropClick={() => setShow(false)}
-          >
-            <DialogContent sx={{ pb: 6, px: { xs: 8, sm: 15 }, pt: { xs: 8, sm: 12.5 }, position: 'relative' }}>
-              <IconButton
-                size='small'
-                onClick={() => setShow(false)}
-                sx={{ position: 'absolute', right: '1rem', top: '1rem' }}
-              >
-                <Icon icon='mdi:close' />
-              </IconButton>
-              <Box sx={{ mb: 8, textAlign: 'center' }}>
-                <Typography variant='h5' sx={{ mb: 3, lineHeight: '2rem' }}>
-                  Quality Master
-                </Typography>
-              </Box>
-              <Grid container spacing={6}>
-                <Grid item xs={12} sm={6}>
-                  {/* <Typography sx={{ mb: 2 }}>Quality</Typography> */}
-                  <TextField fullWidth placeholder='' label='Quality' />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* <Typography sx={{ mb: 2 }}>HSN Code</Typography> */}
-                  <TextField fullWidth placeholder='' label='HSN Code' />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* <Typography sx={{ mb: 2 }}>Supply Category</Typography> */}
-                  <TextField fullWidth placeholder='GST' label='Supply Category' />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  {/* <Typography sx={{ mb: 2 }}>GST</Typography> */}
-                  <TextField fullWidth placeholder='' label='GST' />
-                </Grid>
-                <Grid item xs={12} sm={12}>
-                  {/* <Typography sx={{ mb: 2 }}>Cess Condition</Typography> */}
-                  <FormControl fullWidth>
-                    <InputLabel id='demo-simple-select-outlined-label'>Cess Condition</InputLabel>
-                    <Select id='form-layouts-tabs-select' labelId='form-layouts-tabs-select-label' label='Cess Condition' defaultValue=''>
-                      <MenuItem value='none'>NONE</MenuItem>
-                      <MenuItem value='none'>NONE</MenuItem>
-                      <MenuItem value='none'>NONE</MenuItem>
-                      <MenuItem value='none'>NONE</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12} sm={12}>
-                  <Typography sx={{ mb: 1, textAlign: 'center' }}><strong>Note: BC = Basic Cess || QB = Quanititybase Cess</strong></Typography>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Typography sx={{ mb: 2 }}>Biasic Cess</Typography>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Typography sx={{ mb: 2 }}>Qtybase Cess</Typography>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Typography sx={{ mb: 2 }}>Cess Uom per</Typography>
-                </Grid>
-              </Grid>
-            </DialogContent>
-            <DialogActions sx={{ pb: { xs: 8, sm: 12.5 }, justifyContent: 'center' }}>
-              <Button variant='contained' sx={{ mr: 2 }} onClick={() => setShow(false)}>
-                Save
-              </Button>
-              <Button variant='contained' sx={{ mr: 2 }} onClick={() => setShow(false)}>
-                Cancel
-              </Button>
-              <Button variant='contained' color='error' onClick={() => setShow(false)}>
-                Delete
-              </Button>
-            </DialogActions>
-          </Dialog>
-          {/* Modal End */}
-
           <Divider />
           <MaterialReactTable
             displayColumnDefOptions={{
@@ -539,4 +463,4 @@ const validateEmail = email =>
     )
 const validateAge = age => age >= 18 && age <= 50
 
-export default QualityMasterProfile
+export default AccountsMasterProfile

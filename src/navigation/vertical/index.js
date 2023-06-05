@@ -111,7 +111,7 @@ const navigation = () => {
       children: [
         {
           title: 'Account Master',
-          path: '/Masters/account-master'
+          path: '/Masters/accounts-master-profile'
         },
         {
           title: 'Item Master',
