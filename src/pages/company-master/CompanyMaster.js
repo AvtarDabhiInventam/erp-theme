@@ -244,16 +244,103 @@ const CompanyMaster = () => {
             </Grid>
             <Grid item xs={12}>
               <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                2. Personal Info
+                2. Taxation Information
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField fullWidth label='First Name' placeholder='Leonard' />
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Pan No' placeholder='Pan No' />
+              </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField fullWidth label='Last Name' placeholder='Carter' />
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='ID' placeholder='ID' />
+              </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Password' placeholder='Password' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='GST No' placeholder='Pan No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='ID' placeholder='ID' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Password' placeholder='Password' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Tan No' placeholder='Tan No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Tway ID' placeholder='ID' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Password' placeholder='Password' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Account No' placeholder='Account No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Branch Name' placeholder='Branch Name' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Branch' placeholder='Branch' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='IFSC Code' placeholder='IFSC Code' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='IEC Code' placeholder='IEC Code' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Corporation Registration No' placeholder='Corporation Registration No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Company Registration No' placeholder='Company Registration No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Aadhar No' placeholder='Aadhar No' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Other' placeholder='Other' />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+              <Divider sx={{ mb: '0 !important' }} />
+            </Grid>
+            <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
                 <InputLabel id='form-layouts-separator-select-label'>Country</InputLabel>
                 <Select
@@ -269,7 +356,7 @@ const CompanyMaster = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
                 <InputLabel id='form-layouts-separator-multiple-select-label'>Language</InputLabel>
                 <Select
@@ -290,19 +377,28 @@ const CompanyMaster = () => {
                 </Select>
               </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <DatePicker
-                selected={date}
-                showYearDropdown
-                showMonthDropdown
-                placeholderText='MM-DD-YYYY'
-                customInput={<CustomInput />}
-                id='form-layouts-separator-date'
-                onChange={date => setDate(date)}
-              />
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <FormControlLabel label='Ispayroll?' control={<Checkbox defaultChecked name='basic-checked' />} />
+              </FormControl>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField fullWidth label='Phone No.' placeholder='+1-123-456-8790' />
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <FormControlLabel label='Common Ledger' control={<Checkbox defaultChecked name='basic-checked' />} />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <FormControlLabel
+                  label='Has Export Business'
+                  control={<Checkbox defaultChecked name='basic-checked' />}
+                />
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <FormControlLabel label='Cess Applicable' control={<Checkbox defaultChecked name='basic-checked' />} />
+              </FormControl>
             </Grid>
           </Grid>
         </CardContent>
