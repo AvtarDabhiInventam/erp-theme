@@ -149,11 +149,11 @@ const navigation = () => {
         },
         {
           title: 'City Master',
-          path: ''
+          path: '/Masters/city-master'
         },
         {
           title: 'Currency Master',
-          path: ''
+          path: '/Masters/currency-master'
         },
         {
           title: 'Sub Company Master',
