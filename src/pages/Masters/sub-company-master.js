@@ -20,10 +20,7 @@ import {
   ListItem,
   List,
   InputLabel,
-  Chip,
-  DialogActions,
-  DialogContent,
-  Dialog
+  Divider
 } from '@mui/material'
 import { Box } from '@mui/system'
 
@@ -133,299 +130,272 @@ const SubCompanyMaster = () => {
   const [show, setShow] = useState(false)
 
   return (
-    <Grid container spacing={6}>
-      <Grid item xs={12}>
-        <Card>
-          <CardHeader title='Sub Company Master'></CardHeader>
-          <CardContent>
-            <Grid container spacing={6}>
-              <Grid item xs={12} md={6}>
-                <Card>
-                  <CardContent>
-                    <Grid container spacing={6}>
-                      <Grid item xs={12} md={12}>
-                        <TextField fullWidth id='outlined-basic' label='Sub Company/Branch Name' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='GST No' />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth>
-                          <InputLabel id='demo-simple-select-outlined-label'>Type of Dealer</InputLabel>
-                          <Select
-                            id='form-layouts-tabs-select'
-                            labelId='form-layouts-tabs-select-label'
-                            label='Type of Dealer'
-                            defaultValue=''
-                          >
-                            <MenuItem value='Dealer 1'>Dealer 1</MenuItem>
-                            <MenuItem value='Dealer 2'>Dealer 2</MenuItem>
-                            <MenuItem value='Dealer 3'>Dealer 3</MenuItem>
-                          </Select>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <FormControl fullWidth>
-                          <InputLabel id='demo-simple-select-outlined-label'>CompanyType</InputLabel>
-                          <Select
-                            id='form-layouts-tabs-select'
-                            labelId='form-layouts-tabs-select-label'
-                            label='CompanyType'
-                            defaultValue=''
-                          >
-                            <MenuItem value='CompanyType 1'>CompanyType 1</MenuItem>
-                            <MenuItem value='CompanyType 2'>CompanyType 2</MenuItem>
-                            <MenuItem value='CompanyType 3'>CompanyType 3</MenuItem>
-                          </Select>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <TextField fullWidth rows={3} multiline id='textarea-outlined-static' label='Address' />
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <FormControl fullWidth>
-                          <InputLabel id='demo-simple-select-outlined-label'>Country</InputLabel>
-                          <Select
-                            id='form-layouts-tabs-select'
-                            labelId='form-layouts-tabs-select-label'
-                            label='Country'
-                            defaultValue=''
-                          >
-                            <MenuItem value='India'>India</MenuItem>
-                            <MenuItem value='UK'>UK</MenuItem>
-                            <MenuItem value='US'>US</MenuItem>
-                          </Select>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12} sm={8}>
-                        <FormControl fullWidth>
-                          <InputLabel id='demo-simple-select-outlined-label'>State/Region</InputLabel>
-                          <Select
-                            id='form-layouts-tabs-select'
-                            labelId='form-layouts-tabs-select-label'
-                            label='State/Region'
-                            defaultValue=''
-                          >
-                            <MenuItem value='Gujarat'>Gujarat</MenuItem>
-                            <MenuItem value='MP'>MP</MenuItem>
-                            <MenuItem value='MH'>MH</MenuItem>
-                          </Select>
-                        </FormControl>
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='No' />
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                        <FormControl fullWidth>
-                          <InputLabel id='demo-simple-select-outlined-label'>City</InputLabel>
-                          <Select
-                            id='form-layouts-tabs-select'
-                            labelId='form-layouts-tabs-select-label'
-                            label='City'
-                            defaultValue=''
-                          >
-                            <MenuItem value='Surat'>Surat</MenuItem>
-                            <MenuItem value='Bharuch'>Bharuch</MenuItem>
-                            <MenuItem value='Navsari'>Navsari</MenuItem>
-                          </Select>
-                        </FormControl>
-                        <Box sx={{ mt: 4 }}>
-                          <Button
-                            size='large'
-                            type='submit'
-                            sx={{ mr: 2 }}
-                            variant='contained'
-                            onClick={() => router.push('/Masters/quality-master-profile')}
-                          >
-                            Add New City
-                          </Button>
-                        </Box>
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Pin Code' />
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <FormControlLabel
-                          label='Has Export Business'
-                          control={<Checkbox checked={checked} name='controlled' />}
-                        />
-                      </Grid>
-                    </Grid>
-                  </CardContent>
-                </Card>
-              </Grid>
-
-              <Grid item xs={12} md={6}>
-                <Card sx={{ height: '100%' }}>
-                  <CardContent>
-                    <Grid container spacing={6}>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Telephone No' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Phone No' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Mobile No' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='WhatsApp No' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Contact Person' />
-                      </Grid>
-                      <Grid item xs={12} md={6}>
-                        <TextField fullWidth id='outlined-basic' label='Email' />
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <FormControlLabel
-                          label='Cess Applicable'
-                          control={<Checkbox checked={checked} name='controlled' />}
-                        />
-                      </Grid>
-                      <Grid item xs={12} md={12}>
-                        <DropzoneWrapper>
-                          <Fragment>
-                            <div {...getRootProps({ className: 'dropzone' })}>
-                              <input {...getInputProps()} />
-                              <Box
-                                sx={{
-                                  display: 'flex',
-                                  flexDirection: ['column', 'column', 'row'],
-                                  alignItems: 'center'
-                                }}
-                              >
-                                <Img width={300} alt='Upload img' src='/images/misc/upload.png' />
-                                <Box
-                                  sx={{
-                                    display: 'flex',
-                                    flexDirection: 'column',
-                                    textAlign: ['center', 'center', 'inherit']
-                                  }}
-                                >
-                                  <HeadingTypography variant='h5'>
-                                    Drop files here or click to upload.
-                                  </HeadingTypography>
-                                  <Typography color='textSecondary'>
-                                    Drop files here or click{' '}
-                                    <Link href='/' onClick={handleLinkClick}>
-                                      browse
-                                    </Link>{' '}
-                                    thorough your machine
-                                  </Typography>
-                                </Box>
-                              </Box>
-                            </div>
-                            {files.length ? (
-                              <Fragment>
-                                <List>{fileList}</List>
-                                <div className='buttons'>
-                                  <Button color='error' variant='outlined' onClick={handleRemoveAllFiles}>
-                                    Remove All
-                                  </Button>
-                                  <Button variant='contained'>Upload Files</Button>
-                                </div>
-                              </Fragment>
-                            ) : null}
-                          </Fragment>
-                        </DropzoneWrapper>
-                      </Grid>
-                      <Grid item xs={12} sm={12}>
-                        <CardActions sx={{ pl: 0, pb: 0 }}>
-                          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-                            Browse
-                          </Button>
-                          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-                            Clear
-                          </Button>
-                        </CardActions>
-                      </Grid>
-                    </Grid>
-                  </CardContent>
-                </Card>
-              </Grid>
-
-              <Grid item xs={12} md={12}>
-                <Card>
-                  <CardContent>
-                    <Grid container spacing={6}>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='PanNo' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='ID' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Password' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='GSTNo' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='ID' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Password' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='TanNo' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='ID' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Password' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='AccountNo' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='BankName' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Branch' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='IFSC Code' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='IEC Code' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Corporation Registration No' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Company Registration No' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='AadharNo' />
-                      </Grid>
-                      <Grid item xs={12} md={4}>
-                        <TextField fullWidth id='outlined-basic' label='Other' />
-                      </Grid>
-                    </Grid>
-                  </CardContent>
-                </Card>
-              </Grid>
-
-              <Grid item xs={12} sm={12}>
-                <CardActions sx={{ pl: 0, pb: 0 }}>
-                  <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-                    Submit
-                  </Button>
-                  <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-                    Delete
-                  </Button>
-                  <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-                    Cancel
-                  </Button>
-                </CardActions>
-              </Grid>
+    <Card>
+      <CardHeader title='Sub Company Master' />
+      <Divider sx={{ m: '0 !important' }} />
+      <form onSubmit={e => e.preventDefault()}>
+        <CardContent>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Sub Company/Branch Name' />
             </Grid>
-          </CardContent>
-        </Card>
-      </Grid>
-    </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='GST No' />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-outlined-label'>Type of Dealer</InputLabel>
+                <Select
+                  id='form-layouts-tabs-select'
+                  labelId='form-layouts-tabs-select-label'
+                  label='Type of Dealer'
+                  defaultValue=''
+                >
+                  <MenuItem value='Dealer 1'>Dealer 1</MenuItem>
+                  <MenuItem value='Dealer 2'>Dealer 2</MenuItem>
+                  <MenuItem value='Dealer 3'>Dealer 3</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-outlined-label'>CompanyType</InputLabel>
+                <Select
+                  id='form-layouts-tabs-select'
+                  labelId='form-layouts-tabs-select-label'
+                  label='CompanyType'
+                  defaultValue=''
+                >
+                  <MenuItem value='CompanyType 1'>CompanyType 1</MenuItem>
+                  <MenuItem value='CompanyType 2'>CompanyType 2</MenuItem>
+                  <MenuItem value='CompanyType 3'>CompanyType 3</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <TextField fullWidth multiline id='textarea-outlined-static' label='Address' />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-outlined-label'>Country</InputLabel>
+                <Select
+                  id='form-layouts-tabs-select'
+                  labelId='form-layouts-tabs-select-label'
+                  label='Country'
+                  defaultValue=''
+                >
+                  <MenuItem value='India'>India</MenuItem>
+                  <MenuItem value='UK'>UK</MenuItem>
+                  <MenuItem value='US'>US</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-outlined-label'>State/Region</InputLabel>
+                <Select
+                  id='form-layouts-tabs-select'
+                  labelId='form-layouts-tabs-select-label'
+                  label='State/Region'
+                  defaultValue=''
+                >
+                  <MenuItem value='Gujarat'>Gujarat</MenuItem>
+                  <MenuItem value='MP'>MP</MenuItem>
+                  <MenuItem value='MH'>MH</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} md={2}>
+              <TextField fullWidth id='outlined-basic' label='No' />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <InputLabel id='demo-simple-select-outlined-label'>City</InputLabel>
+                <Select
+                  id='form-layouts-tabs-select'
+                  labelId='form-layouts-tabs-select-label'
+                  label='City'
+                  defaultValue=''
+                >
+                  <MenuItem value='Surat'>Surat</MenuItem>
+                  <MenuItem value='Bharuch'>Bharuch</MenuItem>
+                  <MenuItem value='Navsari'>Navsari</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} md={2}>
+              <Box>
+                <Button
+                  size='large'
+                  type='submit'
+                  sx={{ mr: 2 }}
+                  variant='contained'
+                  onClick={() => router.push('/Masters/quality-master-profile')}
+                >
+                  Add New City
+                </Button>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Pin Code' />
+            </Grid>
+            <Grid item xs={12} sm={8}>
+              <FormControlLabel
+                label='Has Export Business'
+                control={<Checkbox checked={checked} name='controlled' />}
+              />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Telephone No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Phone No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Mobile No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='WhatsApp No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Contact Person' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Email' />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <FormControlLabel label='Cess Applicable' control={<Checkbox checked={checked} name='controlled' />} />
+            </Grid>
+            <Grid item xs={12} md={12}>
+              <DropzoneWrapper>
+                <Fragment>
+                  <div {...getRootProps({ className: 'dropzone' })}>
+                    <input {...getInputProps()} />
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: ['column', 'column', 'row'],
+                        alignItems: 'center'
+                      }}
+                    >
+                      <Img width={300} alt='Upload img' src='/images/misc/upload.png' />
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          textAlign: ['center', 'center', 'inherit']
+                        }}
+                      >
+                        <HeadingTypography variant='h5'>Drop files here or click to upload.</HeadingTypography>
+                        <Typography color='textSecondary'>
+                          Drop files here or click{' '}
+                          <Link href='/' onClick={handleLinkClick}>
+                            browse
+                          </Link>{' '}
+                          thorough your machine
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </div>
+                  {files.length ? (
+                    <Fragment>
+                      <List>{fileList}</List>
+                      <div className='buttons'>
+                        <Button color='error' variant='outlined' onClick={handleRemoveAllFiles}>
+                          Remove All
+                        </Button>
+                        <Button variant='contained'>Upload Files</Button>
+                      </div>
+                    </Fragment>
+                  ) : null}
+                </Fragment>
+              </DropzoneWrapper>
+            </Grid>
+            {/* <Grid item xs={12} sm={12}>
+              <CardActions sx={{ pl: 0, pb: 0 }}>
+                <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+                  Browse
+                </Button>
+                <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+                  Clear
+                </Button>
+              </CardActions>
+            </Grid> */}
+          </Grid>
+        </CardContent>
+        <Divider sx={{ m: '0 !important' }} />
+        <CardContent>
+          <Grid container spacing={5}>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='PanNo' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='ID' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Password' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='GSTNo' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='ID' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Password' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='TanNo' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='ID' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Password' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='AccountNo' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='BankName' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Branch' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='IFSC Code' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='IEC Code' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Corporation Registration No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Company Registration No' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='AadharNo' />
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <TextField fullWidth id='outlined-basic' label='Other' />
+            </Grid>
+          </Grid>
+        </CardContent>
+        <Divider sx={{ m: '0 !important' }} />
+        <CardActions>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Submit
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Delete
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Cancel
+          </Button>
+        </CardActions>
+      </form>
+    </Card>
   )
 }
 
