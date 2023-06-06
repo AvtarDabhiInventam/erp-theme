@@ -15,7 +15,7 @@ const navigation = () => {
           children: [
             {
               title: 'Sales Bill',
-              path: ''
+              path: '/transaction/sales'
             },
             {
               title: 'Sales Challan',
@@ -145,7 +145,7 @@ const navigation = () => {
         },
         {
           title: 'Company Master',
-          path: '/company-master/CompanyMaster'
+          path: '/Masters/company-master'
         },
         {
           title: 'City Master',
