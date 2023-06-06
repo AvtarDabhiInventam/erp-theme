@@ -139,7 +139,7 @@ const Sales = props => {
       <CardHeader title='Sales Voucher' />
       <Divider sx={{ m: '0 !important' }} />
       <form onSubmit={e => e.preventDefault()}>
-        <CardContent>
+        <CardContent sx={{ marginBottom: '20px' }}>
           <Grid container spacing={5}>
             <Grid item xs={12}>
               <Typography variant='body2' sx={{ fontWeight: 600 }}>
@@ -214,103 +214,8 @@ const Sales = props => {
                 <TextField fullWidth label='Pur Sr. No' placeholder='Pur Sr. No' />
               </FormControl>
             </Grid>
-            <Grid item xs={12}>
-              <Divider sx={{ mb: '0 !important' }} />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                2. Taxation Information
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Account No' placeholder='Account No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Branch Name' placeholder='Branch Name' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Branch' placeholder='Branch' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='IFSC Code' placeholder='IFSC Code' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='IEC Code' placeholder='IEC Code' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Corporation Registration No' placeholder='Corporation Registration No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Company Registration No' placeholder='Company Registration No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Aadhar No' placeholder='Aadhar No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Other' placeholder='Other' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12}>
-              <Divider sx={{ mb: '0 !important' }} />
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-select-label'>Country</InputLabel>
-                <Select
-                  label='Country'
-                  defaultValue=''
-                  id='form-layouts-separator-select'
-                  labelId='form-layouts-separator-select-label'
-                >
-                  <MenuItem value='UK'>UK</MenuItem>
-                  <MenuItem value='USA'>USA</MenuItem>
-                  <MenuItem value='Australia'>Australia</MenuItem>
-                  <MenuItem value='Germany'>Germany</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-multiple-select-label'>Language</InputLabel>
-                <Select
-                  multiple
-                  value={language}
-                  onChange={handleSelectChange}
-                  id='form-layouts-separator-multiple-select'
-                  labelId='form-layouts-separator-multiple-select-label'
-                  input={<OutlinedInput label='Language' id='select-multiple-language' />}
-                >
-                  <MenuItem value='English'>English</MenuItem>
-                  <MenuItem value='French'>French</MenuItem>
-                  <MenuItem value='Spanish'>Spanish</MenuItem>
-                  <MenuItem value='Portuguese'>Portuguese</MenuItem>
-                  <MenuItem value='Italian'>Italian</MenuItem>
-                  <MenuItem value='German'>German</MenuItem>
-                  <MenuItem value='Arabic'>Arabic</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
           </Grid>
         </CardContent>
-        <Divider sx={{ m: '0 !important' }} />
-
         <RepeaterWrapper>
           <Repeater count={count}>
             {i => {
