@@ -157,7 +157,7 @@ const navigation = () => {
         },
         {
           title: 'Sub Company Master',
-          path: ''
+          path: '/Masters/sub-company-master-profile'
         },
         {
           title: 'Master Data',
