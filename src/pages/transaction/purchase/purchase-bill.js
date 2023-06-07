@@ -142,93 +142,100 @@ const PurchaseBill = props => {
       <form onSubmit={e => e.preventDefault()}>
         <CardContent sx={{ marginBottom: '20px' }}>
           <Grid container spacing={5}>
-            <Grid item xs={12} sm={6}>
-              <Box className='demo-space-x' sx={{ display: 'flex' }}>
-                <Avatar src='/images/avatars/1.png' alt='Victor Anderson' />
-              </Box>
+            <Grid item xs={12} sm={12}>
+              <Grid container spacing={5}>
+                <Grid item xs={12} sm={4}>
+                  <Box className='demo-space-x' sx={{ display: 'flex', alignItems: 'center' }}>
+                    <Avatar src='/images/avatars/1.png' alt='Victor Anderson' sx={{ marginTop: '0px !important' }} />
+                    <TextField fullWidth label='User Name' sx={{ marginTop: '0px !important' }} />
+                    <Typography variant='body2' sx={{ fontWeight: 600, marginTop: '0px !important' }}>
+                      0.00
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <Box className='demo-space-x' sx={{ display: 'flex', alignItems: 'center' }}>
+                    <TextField fullWidth label='Account' sx={{ marginTop: '0px !important' }} />
+                    <Typography variant='body2' sx={{ fontWeight: 600, marginTop: '0px !important' }}>
+                      0
+                    </Typography>
+                  </Box>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <FormControl fullWidth>
+                    <InputLabel id='form-layouts-separator-select-label'>GST No</InputLabel>
+                    <Select
+                      label='Country'
+                      defaultValue=''
+                      id='form-layouts-separator-select'
+                      labelId='form-layouts-separator-select-label'
+                    >
+                      <MenuItem value='UK'>UK</MenuItem>
+                      <MenuItem value='USA'>USA</MenuItem>
+                      <MenuItem value='Australia'>Australia</MenuItem>
+                      <MenuItem value='Germany'>Germany</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <TextField fullWidth label='State Code' placeholder='State Code' />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <FormControl fullWidth>
+                    <InputLabel id='form-layouts-separator-select-label'>Type of Dealer</InputLabel>
+                    <Select
+                      label='Country'
+                      defaultValue=''
+                      id='form-layouts-separator-select'
+                      labelId='form-layouts-separator-select-label'
+                    >
+                      <MenuItem value='UK'>UK</MenuItem>
+                      <MenuItem value='USA'>USA</MenuItem>
+                      <MenuItem value='Australia'>Australia</MenuItem>
+                      <MenuItem value='Germany'>Germany</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <FormControl fullWidth>
+                    <InputLabel id='form-layouts-separator-select-label'>Update Transport Details?</InputLabel>
+                    <Select
+                      label='Update Transport Details?'
+                      defaultValue=''
+                      id='form-layouts-separator-select'
+                      labelId='form-layouts-separator-select-label'
+                    >
+                      <MenuItem value='No'>No</MenuItem>
+                      <MenuItem value='Yes'>Yes</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                  <TextField fullWidth label='Agent/Ref.' />
+                  <Box sx={{ mt: 4 }}>
+                    <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+                      Checker Name
+                    </Button>
+                  </Box>
+                </Grid>
+              </Grid>
             </Grid>
 
-
-
-
-
-
-
-
-
-
-            <Grid item xs={12}>
-              <Typography variant='body2' sx={{ fontWeight: 600 }}>
-                1. Company Details
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-select-label'>GST No</InputLabel>
-                <Select
-                  label='Country'
-                  defaultValue=''
-                  id='form-layouts-separator-select'
-                  labelId='form-layouts-separator-select-label'
-                >
-                  <MenuItem value='UK'>UK</MenuItem>
-                  <MenuItem value='USA'>USA</MenuItem>
-                  <MenuItem value='Australia'>Australia</MenuItem>
-                  <MenuItem value='Germany'>Germany</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='State Code' placeholder='State Code' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-select-label'>Type of Dealer</InputLabel>
-                <Select
-                  label='Country'
-                  defaultValue=''
-                  id='form-layouts-separator-select'
-                  labelId='form-layouts-separator-select-label'
-                >
-                  <MenuItem value='UK'>UK</MenuItem>
-                  <MenuItem value='USA'>USA</MenuItem>
-                  <MenuItem value='Australia'>Australia</MenuItem>
-                  <MenuItem value='Germany'>Germany</MenuItem>
-                </Select>
-              </FormControl>
-            </Grid>
-
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Agent/Ref' placeholder='Agent/Ref' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <FormControlLabel control={<Switch defaultChecked />} label='Transport Details' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Invoice No' placeholder='Invoice No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Challan No' placeholder='Challan No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Order No' placeholder='Order No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Pur Sr. No' placeholder='Pur Sr. No' />
-              </FormControl>
+            <Grid item xs={12} sm={12}>
+              <Grid container spacing={5}>
+                <Grid item xs={12} sm={3}>
+                  <TextField fullWidth label='Tuesday' placeholder='06-06-2022' />
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <TextField fullWidth label='Voucher No' placeholder='1' />
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <TextField fullWidth label='Invoice No' placeholder='' />
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <TextField fullWidth label='Challan No' placeholder='' />
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </CardContent>
@@ -370,19 +377,6 @@ const PurchaseBill = props => {
                   variant='body2'
                   sx={{ mr: 2, color: 'text.primary', fontWeight: 600, letterSpacing: '.25px', width: '120px' }}
                 >
-                  Due Days:
-                </Typography>
-                <TextField
-                  size='small'
-                  defaultValue=''
-                  sx={{ maxWidth: '150px', '& .MuiInputBase-input': { color: 'text.secondary' } }}
-                />
-              </Box>
-              <Box sx={{ mb: 4, display: 'flex', alignItems: 'center' }}>
-                <Typography
-                  variant='body2'
-                  sx={{ mr: 2, color: 'text.primary', fontWeight: 600, letterSpacing: '.25px', width: '120px' }}
-                >
                   Discount%:
                 </Typography>
                 <TextField
@@ -407,7 +401,96 @@ const PurchaseBill = props => {
                   defaultValue='It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance projects. Thank You!'
                 />
               </Box>
+
+              <Grid container>
+                <Grid item xs={12} sm={10}>
+                  <Card>
+                    <CardContent>
+                      <RepeaterWrapper>
+                        <Repeater count={count}>
+                          {i => {
+                            const Tag = i === 0 ? Box : Collapse
+
+                            return (
+                              <Tag key={i} className='repeater-wrapper' {...(i !== 0 ? { in: true } : {})}>
+                                <Grid container>
+                                  <RepeatingContent item xs={12}>
+                                    <Grid container sx={{ py: 4, width: '100%', pr: { lg: 0, xs: 4 } }}>
+                                      <Grid item lg={3} md={3} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
+                                        <Typography
+                                          variant='subtitle2'
+                                          className='col-title'
+                                          sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                                        >
+                                          +/-
+                                        </Typography>
+                                        <TextField fullWidth multiline size='small' defaultValue='' />
+                                      </Grid>
+                                      <Grid item lg={3} md={3} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
+                                        <Typography
+                                          variant='subtitle2'
+                                          className='col-title'
+                                          sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                                        >
+                                          Name
+                                        </Typography>
+                                        <TextField fullWidth multiline size='small' defaultValue='' />
+                                      </Grid>
+                                      <Grid item lg={3} md={3} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
+                                        <Typography
+                                          variant='subtitle2'
+                                          className='col-title'
+                                          sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                                        >
+                                          %
+                                        </Typography>
+                                        <TextField fullWidth multiline size='small' defaultValue='' />
+                                      </Grid>
+                                      <Grid item lg={3} md={3} xs={12} sx={{ px: 4, my: { lg: 0 }, mt: 2 }}>
+                                        <Typography
+                                          variant='subtitle2'
+                                          className='col-title'
+                                          sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                                        >
+                                          Amount
+                                        </Typography>
+                                        <TextField fullWidth multiline size='small' defaultValue='' />
+                                      </Grid>
+                                    </Grid>
+                                    <InvoiceAction>
+                                      <IconButton size='small' onClick={deleteForm}>
+                                        <Icon icon='mdi:close' fontSize={20} />
+                                      </IconButton>
+                                    </InvoiceAction>
+                                  </RepeatingContent>
+                                </Grid>
+                              </Tag>
+                            )
+                          }}
+                        </Repeater>
+
+                        <Grid container sx={{ mt: 4.75 }}>
+                          <Grid item xs={12} sx={{ px: 0 }}>
+                            <Button
+                              size='small'
+                              variant='contained'
+                              startIcon={<Icon icon='mdi:plus' fontSize={20} />}
+                              onClick={() => setCount(count + 1)}
+                            >
+                              Add Item
+                            </Button>
+                          </Grid>
+                        </Grid>
+                      </RepeaterWrapper>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              </Grid>
+
             </Grid>
+
+
+
             <Grid item xs={12} sm={3} sx={{ mb: { sm: 0, xs: 4 }, order: { sm: 2, xs: 1 } }}>
               <CalcWrapper>
                 <Typography variant='body2'>Taxable:</Typography>
@@ -469,12 +552,37 @@ const PurchaseBill = props => {
             </Grid>
           </Grid>
         </CardContent>
-        <CardActions>
+
+        <CardActions sx={{ display: 'flex', alignItems: 'center', mt: 5 }}>
+          <Typography variant='body2' sx={{ fontWeight: 600 }}>
+            Payable Amount:
+          </Typography>
+          <Typography variant='body2' sx={{ fontWeight: 600 }}>
+            0.00
+          </Typography>
+        </CardActions>
+
+        <CardActions sx={{ mt: 0 }}>
           <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
-            Submit
+            Save
           </Button>
-          <Button type='reset' size='large' color='secondary' variant='outlined'>
-            Reset
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Edit
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Cancel
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Delete
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Print
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Email
+          </Button>
+          <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
+            Cash Puchase
           </Button>
         </CardActions>
       </form>
