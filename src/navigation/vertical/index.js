@@ -63,7 +63,17 @@ const navigation = () => {
         },
         {
           title: 'Income/Exp Voucher',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'Expense Voucher',
+              path: '/transaction/expense-voucher'
+            },
+            {
+              title: 'Income Voucher',
+              path: '/transaction/income-voucher'
+            }
+          ]
         },
         {
           title: 'Credit Note',
