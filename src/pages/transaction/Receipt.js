@@ -77,7 +77,7 @@ const InvoiceAction = styled(Box)(({ theme }) => ({
   borderLeft: `1px solid ${theme.palette.divider}`
 }))
 
-const SalesOrder = props => {
+const Receipt = props => {
   const [count, setCount] = useState(1)
   const { clients, invoiceNumber, selectedClient, setSelectedClient, toggleAddCustomerDrawer } = props
 
@@ -128,7 +128,7 @@ const SalesOrder = props => {
 
   return (
     <Card>
-      <CardHeader title='Sales Voucher' />
+      <CardHeader title='Receipt' />
       <Divider sx={{ m: '0 !important' }} />
       <form onSubmit={e => e.preventDefault()}>
         <CardContent sx={{ marginBottom: '20px' }}>
@@ -140,70 +140,55 @@ const SalesOrder = props => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-select-label'>GST No</InputLabel>
-                <Select
-                  label='Country'
-                  defaultValue=''
-                  id='form-layouts-separator-select'
-                  labelId='form-layouts-separator-select-label'
-                >
-                  <MenuItem value='UK'>UK</MenuItem>
-                  <MenuItem value='USA'>USA</MenuItem>
-                  <MenuItem value='Australia'>Australia</MenuItem>
-                  <MenuItem value='Germany'>Germany</MenuItem>
-                </Select>
+                <TextField fullWidth label='Account' placeholder='Account' />
               </FormControl>
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <TextField fullWidth label='State Code' placeholder='State Code' />
+                <TextField fullWidth label='Amount' placeholder='Amount' />
               </FormControl>
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <InputLabel id='form-layouts-separator-select-label'>Type of Dealer</InputLabel>
-                <Select
-                  label='Country'
-                  defaultValue=''
-                  id='form-layouts-separator-select'
-                  labelId='form-layouts-separator-select-label'
-                >
-                  <MenuItem value='UK'>UK</MenuItem>
-                  <MenuItem value='USA'>USA</MenuItem>
-                  <MenuItem value='Australia'>Australia</MenuItem>
-                  <MenuItem value='Germany'>Germany</MenuItem>
-                </Select>
+                <TextField fullWidth label='Voucher Adjust' placeholder='Voucher Adjust' />
               </FormControl>
             </Grid>
 
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <TextField fullWidth label='Agent/Ref' placeholder='Agent/Ref' />
+                <TextField fullWidth label='Date' placeholder='Date' />
+              </FormControl>
+            </Grid>
+
+            <Grid item xs={12} sm={4}>
+              <FormControl fullWidth>
+                <TextField fullWidth label='Voucher No' placeholder='Voucher No' />
               </FormControl>
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <FormControlLabel control={<Switch defaultChecked />} label='Transport Details' />
+                <TextField fullWidth label='CHQ No' placeholder='CHQ No' />
               </FormControl>
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <TextField fullWidth label='Invoice No' placeholder='Invoice No' />
+                <TextField fullWidth label='Slip No' placeholder='Slip No' />
               </FormControl>
             </Grid>
             <Grid item xs={12} sm={4}>
               <FormControl fullWidth>
-                <TextField fullWidth label='Challan No' placeholder='Challan No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Order No' placeholder='Order No' />
-              </FormControl>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <FormControl fullWidth>
-                <TextField fullWidth label='Pur Sr. No' placeholder='Pur Sr. No' />
+                <InputLabel id='form-layouts-separator-select-label'>CHQ Bank</InputLabel>
+                <Select
+                  label='Country'
+                  defaultValue=''
+                  id='form-layouts-separator-select'
+                  labelId='form-layouts-separator-select-label'
+                >
+                  <MenuItem value='UK'>UK</MenuItem>
+                  <MenuItem value='USA'>USA</MenuItem>
+                  <MenuItem value='Australia'>Australia</MenuItem>
+                  <MenuItem value='Germany'>Germany</MenuItem>
+                </Select>
               </FormControl>
             </Grid>
           </Grid>
@@ -224,7 +209,7 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            Quality
+                            Type
                           </Typography>
                           <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
@@ -234,7 +219,7 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            Remarks
+                            Voucher No
                           </Typography>
                           <TextField
                             size='small'
@@ -250,7 +235,7 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            GST%
+                            Bal Amt
                           </Typography>
                           <TextField
                             size='small'
@@ -266,7 +251,7 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            Unit
+                            TDS%
                           </Typography>
                           <TextField
                             size='small'
@@ -282,7 +267,7 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            InclRate
+                            TDS Amt
                           </Typography>
                           <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
@@ -292,7 +277,27 @@ const SalesOrder = props => {
                             className='col-title'
                             sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
                           >
-                            Amount
+                            Add less%
+                          </Typography>
+                          <TextField fullWidth multiline size='small' defaultValue='' />
+                        </Grid>
+                        <Grid item lg={2} md={5} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
+                          <Typography
+                            variant='subtitle2'
+                            className='col-title'
+                            sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                          >
+                            Add less%
+                          </Typography>
+                          <TextField fullWidth multiline size='small' defaultValue='' />
+                        </Grid>
+                        <Grid item lg={2} md={5} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
+                          <Typography
+                            variant='subtitle2'
+                            className='col-title'
+                            sx={{ mb: { md: 2, xs: 0 }, color: 'text.primary' }}
+                          >
+                            Add less%
                           </Typography>
                           <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
@@ -458,4 +463,4 @@ const SalesOrder = props => {
   )
 }
 
-export default SalesOrder
+export default Receipt

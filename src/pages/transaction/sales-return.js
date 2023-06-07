@@ -77,7 +77,7 @@ const InvoiceAction = styled(Box)(({ theme }) => ({
   borderLeft: `1px solid ${theme.palette.divider}`
 }))
 
-const SalesOrder = props => {
+const SalesReturn = props => {
   const [count, setCount] = useState(1)
   const { clients, invoiceNumber, selectedClient, setSelectedClient, toggleAddCustomerDrawer } = props
 
@@ -458,4 +458,4 @@ const SalesOrder = props => {
   )
 }
 
-export default SalesOrder
+export default SalesReturn
