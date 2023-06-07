@@ -19,7 +19,7 @@ const navigation = () => {
             },
             {
               title: 'Sales Challan',
-              path: ''
+              path: '/transaction/sales-challan'
             },
             {
               title: 'Sales Order',
