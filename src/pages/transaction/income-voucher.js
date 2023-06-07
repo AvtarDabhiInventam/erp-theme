@@ -11,23 +11,12 @@ import {
   Box,
   Button,
   CardActions,
-  Checkbox,
   Divider,
   FormControl,
-  FormControlLabel,
-  InputAdornment,
   InputLabel,
   MenuItem,
-  OutlinedInput,
   Select,
-  Switch,
-  Tab,
-  Table,
-  TableBody,
-  TableContainer,
-  TableRow,
   TextField,
-  Tooltip,
   Collapse,
   Avatar
 } from '@mui/material'
@@ -86,7 +75,7 @@ const InvoiceAction = styled(Box)(({ theme }) => ({
   borderLeft: `1px solid ${theme.palette.divider}`
 }))
 
-const PurchaseBill = props => {
+const IncomeVoucher = props => {
   const [count, setCount] = useState(1)
   const { clients, invoiceNumber, selectedClient, setSelectedClient, toggleAddCustomerDrawer } = props
 
@@ -137,7 +126,7 @@ const PurchaseBill = props => {
 
   return (
     <Card>
-      <CardHeader title='Purchase Bill' />
+      <CardHeader title='Expense Voucher' />
       <Divider sx={{ m: '0 !important' }} />
       <form onSubmit={e => e.preventDefault()}>
         <CardContent sx={{ marginBottom: '20px' }}>
@@ -220,7 +209,6 @@ const PurchaseBill = props => {
                 </Grid>
               </Grid>
             </Grid>
-
             <Grid item xs={12} sm={12}>
               <Grid container spacing={5}>
                 <Grid item xs={12} sm={3}>
@@ -267,13 +255,7 @@ const PurchaseBill = props => {
                           >
                             Remarks
                           </Typography>
-                          <TextField
-                            size='small'
-                            type='number'
-                            placeholder='24'
-                            defaultValue='24'
-                            InputProps={{ inputProps: { min: 0 } }}
-                          />
+                          <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
                         <Grid item lg={2} md={2} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
                           <Typography
@@ -283,13 +265,7 @@ const PurchaseBill = props => {
                           >
                             GST%
                           </Typography>
-                          <TextField
-                            size='small'
-                            type='number'
-                            placeholder='1'
-                            defaultValue='1'
-                            InputProps={{ inputProps: { min: 0 } }}
-                          />
+                          <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
                         <Grid item lg={2} md={1} xs={12} sx={{ px: 4, my: { lg: 0 }, mt: 2 }}>
                           <Typography
@@ -299,13 +275,7 @@ const PurchaseBill = props => {
                           >
                             Unit
                           </Typography>
-                          <TextField
-                            size='small'
-                            type='number'
-                            placeholder='1'
-                            defaultValue='1'
-                            InputProps={{ inputProps: { min: 0 } }}
-                          />
+                          <TextField fullWidth multiline size='small' defaultValue='' />
                         </Grid>
                         <Grid item lg={2} md={5} xs={12} sx={{ px: 4, my: { lg: 0, xs: 4 } }}>
                           <Typography
@@ -339,7 +309,6 @@ const PurchaseBill = props => {
               )
             }}
           </Repeater>
-
           <Grid container sx={{ mt: 4.75 }}>
             <Grid item xs={12} sx={{ px: 0 }}>
               <Button
@@ -353,9 +322,7 @@ const PurchaseBill = props => {
             </Grid>
           </Grid>
         </RepeaterWrapper>
-
         <Divider />
-
         <CardContent>
           <Grid container>
             <Grid item xs={12} sm={9} sx={{ order: { sm: 1, xs: 2 } }}>
@@ -401,7 +368,6 @@ const PurchaseBill = props => {
                   defaultValue='It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance projects. Thank You!'
                 />
               </Box>
-
               <Grid container>
                 <Grid item xs={12} sm={10}>
                   <Card>
@@ -468,7 +434,6 @@ const PurchaseBill = props => {
                             )
                           }}
                         </Repeater>
-
                         <Grid container sx={{ mt: 4.75 }}>
                           <Grid item xs={12} sx={{ px: 0 }}>
                             <Button
@@ -487,7 +452,6 @@ const PurchaseBill = props => {
                 </Grid>
               </Grid>
             </Grid>
-
             <Grid item xs={12} sm={3} sx={{ mb: { sm: 0, xs: 4 }, order: { sm: 2, xs: 1 } }}>
               <CalcWrapper>
                 <Typography variant='body2'>Taxable:</Typography>
@@ -549,7 +513,6 @@ const PurchaseBill = props => {
             </Grid>
           </Grid>
         </CardContent>
-
         <CardActions sx={{ display: 'flex', alignItems: 'center', mt: 5 }}>
           <Typography variant='body2' sx={{ fontWeight: 600 }}>
             Payable Amount:
@@ -558,7 +521,6 @@ const PurchaseBill = props => {
             0.00
           </Typography>
         </CardActions>
-
         <CardActions sx={{ mt: 0 }}>
           <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
             Save
@@ -587,4 +549,4 @@ const PurchaseBill = props => {
   )
 }
 
-export default PurchaseBill
+export default IncomeVoucher
