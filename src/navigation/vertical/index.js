@@ -33,7 +33,25 @@ const navigation = () => {
         },
         {
           title: 'Purchase',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'Purchase Bill',
+              path: '/transaction/purchase/purchase-bill'
+            },
+            {
+              title: 'Purchase Order',
+              path: '/transaction/purchase/purchase-order'
+            },
+            {
+              title: 'Purchase Return',
+              path: '/Masters/account-master/'
+            },
+            {
+              title: 'Purchase Challan',
+              path: ''
+            }
+          ]
         },
         {
           title: 'Bank/Cash',
