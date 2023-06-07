@@ -23,11 +23,11 @@ const navigation = () => {
             },
             {
               title: 'Sales Order',
-              path: ''
+              path: '/transaction/sales-order'
             },
             {
               title: 'Sales Return',
-              path: ''
+              path: '/transaction/sales-return'
             }
           ]
         },
@@ -55,7 +55,21 @@ const navigation = () => {
         },
         {
           title: 'Bank/Cash',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'Receipt',
+              path: '/transaction/Receipt'
+            },
+            {
+              title: 'Payment',
+              path: '/transaction/sales-challan'
+            },
+            {
+              title: 'Contra',
+              path: '/transaction/sales-order'
+            }
+          ]
         },
         {
           title: 'Journal Voucher',
