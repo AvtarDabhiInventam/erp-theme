@@ -119,7 +119,33 @@ const navigation = () => {
         },
         {
           title: 'Opening',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'Sales',
+              path: '/transaction/sales-opening'
+            },
+            {
+              title: 'Sales Order',
+              path: ''
+            },
+            {
+              title: 'Purchase',
+              path: ''
+            },
+            {
+              title: 'Issue Challan',
+              path: ''
+            },
+            {
+              title: 'Job Issue Challan',
+              path: ''
+            },
+            {
+              title: 'Journal',
+              path: ''
+            }
+          ]
         }
       ]
     },
