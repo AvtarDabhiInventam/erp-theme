@@ -91,11 +91,31 @@ const navigation = () => {
         },
         {
           title: 'Credit Note',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'On Sales',
+              path: '/transaction/credit-on-sales'
+            },
+            {
+              title: 'On Purchase',
+              path: '/transaction/credit-on-purchase'
+            }
+          ]
         },
         {
           title: 'Debit Note',
-          path: ''
+          icon: 'mdi:file-document-outline',
+          children: [
+            {
+              title: 'On Sales',
+              path: '/transaction/debit-on-sales'
+            },
+            {
+              title: 'On Purchase',
+              path: '/transaction/debit-on-purchase'
+            }
+          ]
         },
         {
           title: 'Opening',
