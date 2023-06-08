@@ -63,7 +63,7 @@ const navigation = () => {
             },
             {
               title: 'Payment',
-              path: '/transaction/sales-challan'
+              path: '/transaction/payment'
             },
             {
               title: 'Contra',

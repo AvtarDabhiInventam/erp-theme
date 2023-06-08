@@ -77,7 +77,7 @@ const InvoiceAction = styled(Box)(({ theme }) => ({
   borderLeft: `1px solid ${theme.palette.divider}`
 }))
 
-const Receipt = props => {
+const Payment = props => {
   const [count, setCount] = useState(1)
   const { clients, invoiceNumber, selectedClient, setSelectedClient, toggleAddCustomerDrawer } = props
 
@@ -128,7 +128,7 @@ const Receipt = props => {
 
   return (
     <Card>
-      <CardHeader title='Receipt' />
+      <CardHeader title='PAyment' />
       <Divider sx={{ m: '0 !important' }} />
       <CardActions sx={{ mt: 0 }}>
         <Button size='large' type='submit' sx={{ mr: 2 }} variant='contained'>
@@ -461,4 +461,4 @@ const Receipt = props => {
   )
 }
 
-export default Receipt
+export default Payment
