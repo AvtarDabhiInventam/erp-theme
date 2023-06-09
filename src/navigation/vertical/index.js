@@ -127,23 +127,23 @@ const navigation = () => {
             },
             {
               title: 'Sales Order',
-              path: ''
+              path: '/transaction/sales-order-opening'
             },
             {
               title: 'Purchase',
-              path: ''
+              path: '/transaction/purchase-opening'
             },
             {
               title: 'Issue Challan',
-              path: ''
+              path: '/transaction/issue-challan-opening'
             },
             {
               title: 'Job Issue Challan',
-              path: ''
+              path: '/transaction/job-issue-challan-opening'
             },
             {
               title: 'Journal',
-              path: ''
+              path: '/transaction/journal-opening'
             }
           ]
         }
