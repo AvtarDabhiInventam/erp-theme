@@ -175,11 +175,11 @@ const navigation = () => {
         },
         {
           title: 'Final Report',
-          path: ''
+          path: '/reports/final-account-report'
         },
         {
           title: 'Reconsilation Report',
-          path: ''
+          path: '/reports/bank-reconsilation'
         },
         {
           title: 'Interest Report',
