@@ -43,35 +43,6 @@ const gstReport = () => {
   })
 
   // Handle Password
-  const handlePasswordChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
-
-  const handleClickShowPassword = () => {
-    setValues({ ...values, showPassword: !values.showPassword })
-  }
-
-  const handleMouseDownPassword = event => {
-    event.preventDefault()
-  }
-
-  // Handle Confirm Password
-  const handleConfirmChange = prop => event => {
-    setValues({ ...values, [prop]: event.target.value })
-  }
-
-  const handleClickShowConfirmPassword = () => {
-    setValues({ ...values, showPassword2: !values.showPassword2 })
-  }
-
-  const handleMouseDownConfirmPassword = event => {
-    event.preventDefault()
-  }
-
-  // Handle Select
-  const handleSelectChange = event => {
-    setLanguage(event.target.value)
-  }
 
   return (
     <Card>
