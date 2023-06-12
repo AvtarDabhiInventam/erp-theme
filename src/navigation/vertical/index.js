@@ -155,23 +155,23 @@ const navigation = () => {
       children: [
         {
           title: 'Ledger Account',
-          path: ''
+          path: '/reports/ledger-account'
         },
         {
           title: 'OutStanding Report',
-          path: ''
+          path: '/reports/outstanding-report'
         },
         {
           title: 'Sales Purchase Report',
-          path: ''
+          path: '/reports/sales-purchase-report'
         },
         {
           title: 'TDS/TCS Report',
-          path: ''
+          path: '/reports/tcs-tds-report'
         },
         {
           title: 'GST Report',
-          path: ''
+          path: '/reports/gst-report'
         },
         {
           title: 'Final Report',
