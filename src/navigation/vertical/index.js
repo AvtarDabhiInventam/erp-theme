@@ -297,7 +297,7 @@ const navigation = () => {
       children: [
         {
           title: 'Update Database',
-          path: ''
+          path: 'an'
         },
         {
           title: 'Send Bulk Whats App',
@@ -305,7 +305,17 @@ const navigation = () => {
         },
         {
           title: 'Fill Challan',
-          path: ''
+          path: '',
+          children: [
+            {
+              title: 'Income Tax/ Advance Challan',
+              path: '/accessories/advance-challan'
+            },
+            {
+              title: 'TDS Challan',
+              path: '/accessories/tds-challan'
+            }
+          ]
         },
         {
           title: 'Data Transfer',
@@ -313,7 +323,21 @@ const navigation = () => {
         },
         {
           title: 'Admin',
-          path: ''
+          path: '',
+          children: [
+            {
+              title: 'User Master',
+              path: '/accessories/user-master'
+            },
+            {
+              title: 'Role Management',
+              path: '/accessories/role-management'
+            },
+            {
+              title: 'Change Password',
+              path: '/accessories/change-password'
+            }
+          ]
         },
         {
           title: 'Create New Year',
