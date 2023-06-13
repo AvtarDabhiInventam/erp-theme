@@ -183,31 +183,31 @@ const navigation = () => {
         },
         {
           title: 'Interest Report',
-          path: ''
+          path: '/reports/interest-report'
         },
         {
           title: 'Order And Challan Report',
-          path: ''
+          path: '/reports/order-challan-report'
         },
         {
           title: 'Income/Exp Report',
-          path: ''
+          path: '/reports/income-expense-report'
         },
         {
           title: 'Brokerage Report',
-          path: ''
+          path: '/reports/brokerage-report'
         },
         {
           title: 'Inventory Report',
-          path: ''
+          path: '/reports/itemwise-report'
         },
         {
           title: 'Ledger-O/S Report',
-          path: ''
+          path: '/reports/ledger-o-s-report'
         },
         {
           title: 'Multi-Account Ledger',
-          path: ''
+          path: '/reports/multi-account-ledger'
         }
       ]
     },
